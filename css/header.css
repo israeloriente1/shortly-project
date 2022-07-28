@@ -1,0 +1,61 @@
+header {
+    overflow: hidden;
+}
+
+header a {
+    color: var(--grayishVioletColor);
+}
+
+header a:hover {
+    color: var(--veryDarkVioletColor);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav section .circleButton {
+    width: 90px;
+}
+
+.headerSection {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 80rem;
+}
+
+.headerSection article {
+    width: 31rem;
+    font-size: 18px;
+}
+
+.headerSection h1 {
+    color: var(--veryDarkVioletColor);
+    font-size: 4rem;
+    line-height: 4.4rem;
+    margin-bottom: 0px;
+}
+
+.headerSection p {
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+}
+
+.headerSection img {
+    position: absolute;
+    right: -17rem;
+}
+
+.headerSection article a.circleButton {
+    padding: 3px 25px;
+}

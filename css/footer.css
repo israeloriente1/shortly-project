@@ -1,0 +1,59 @@
+/* footer */
+
+footer {
+    background-color: var(--veryDarkVioletColor);
+    color: white;
+    padding: 4rem 4rem 1rem 4rem;
+}
+
+footer img[alt="shortly logo"] {
+    filter: brightness(200);
+}
+
+footer a {
+    font-weight: 500;
+    color: var(--grayishVioletColor);
+    padding-left: 0;
+}
+
+footer a:hover {
+    color: var(--cyanColor);
+}
+
+/* nav */
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+}
+
+footer nav h1 {
+    margin-top: 3px;
+}
+
+footer nav section {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+footer nav section div {
+    display: flex;
+    flex-direction: column;
+    line-height: 10px;
+    font-size: 14px;
+}
+
+nav section.socialNetworks {
+    gap: 20px;
+}
+
+nav section.socialNetworks:hover {
+    color: var(--cyanColor);
+}
+
+div.attribution a {
+    color: var(--cyanColor);
+}

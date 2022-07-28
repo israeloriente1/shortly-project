@@ -7,15 +7,18 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/footer.css">
 
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
-      font-size: 11px;
+      font-size: 12px;
       text-align: center;
+      margin-top: 28px;
     }
 
     .attribution a {
@@ -56,45 +59,73 @@
   </header>
 
   <main>
-    <form action="#" method="post"></form>
+    
+      <form action="./index.html" method="post">
+        <input type="url" name="userURL" id="userURL" placeholder="Shorten a link here..." required>
+        <input type="submit" value="Shorten it!" class="squareButton">
+      </form>
 
-    <section>
-      <h2>Advanced Statistics</h2>
-      <p>
-        Track how your links are performing across the web with our
-        advanced statistics dashboard.
-      </p>
+    <section class="urlList">
+      <div class="urlContainer">
+        <span>https://facebook.com.br</span>
+        <div>
+          <span>https://fasg2a.com.br</span>
+          <button class="squareButton">copy</button>
+        </div>
+      </div>
 
-      <article>
-        <h3>Brand Recognition</h3>
-        <p>
-          Boost your brand recognition with each click. Generic links don’t
-          mean a thing. Branded links help instil confidence in your content.
-        </p>
-      </article>
-
-      <article>
-        <h3>Detailed Records</h3>
-        <p>
-          Gain insights into who is clicking your links. Knowing when and where
-          people engage with your content helps inform better decisions.
-        </p>
-      </article>
-
-      <article>
-        <h3>Fully Customizable</h3>
-        <p>
-          Improve brand awareness and content discoverability through customizable
-          links, supercharging audience engagement.
-        </p>
-      </article>
+      <div class="urlContainer">
+        <span>https://facebook.com.br</span>
+        <div>
+          <span>https://fasg2fa3gaa.com.br</span>
+          <button class="squareButton">copy</button>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h1>Boost your links today</h1>
-      <button><a href="#" target="_self">Get Started</a></button>
+      <article class="main">
+        <h1>Advanced Statistics</h1>
+        <p>
+          Track how your links are performing across the web with our
+          advanced statistics dashboard.
+        </p>
+      </article>
+
+      <section class="details">
+        <hr>
+        <article>
+          <div class="img"><img src="./images/icon-brand-recognition.svg" alt="brand recognition"></div>
+          <h2>Brand Recognition</h2>
+          <p>
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </article>
+        <article class="second">
+          <div class="img"><img src="./images/icon-detailed-records.svg" alt="detailed Records"></div>
+          <h2>Detailed Records</h2>
+          <p>
+            Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.
+          </p>
+        </article>
+        <article class="third">
+          <div class="img"><img src="./images/icon-fully-customizable.svg" alt="fully customizable"></div>
+          <h2>Fully Customizable</h2>
+          <p>
+            Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.
+          </p>
+        </article>
+      </section>
     </section>
   </main>
+
+  <aside>
+      <h1>Boost your links today</h1>
+      <button class="circleButton"><a href="#" target="_self" >Get Started</a></button>
+  </aside>
 
   <footer>
     <nav>
@@ -119,17 +150,20 @@
           <a href="#" target="_self">Careers</a>
           <a href="#" target="_self">Contact</a>
         </div>
-          <img src="./images/icon-facebook.svg" alt="facebook logo">
-          <img src="./images/icon-twitter.svg" alt="twitter logo">
-          <img src="./images/icon-pinterest.svg" alt="pinterest logo">
-          <img src="./images/icon-instagram.svg" alt="instagram logo">
-        <div>
+        <section class="socialNetworks">
+          </div>
+            <img src="./images/icon-facebook.svg" alt="facebook logo">
+            <img src="./images/icon-twitter.svg" alt="twitter logo">
+            <img src="./images/icon-pinterest.svg" alt="pinterest logo">
+            <img src="./images/icon-instagram.svg" alt="instagram logo">
+          <div>
+        </section>
       </section>
     </nav>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">IsraelOriente</a>.
+      Coded by <a href="https://github.com/israeloriente1" target="_blank">IsraelOriente</a>.
     </div>
   </footer>
 </body>
