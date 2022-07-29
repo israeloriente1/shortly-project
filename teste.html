@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        section.urlList {
+            transform: translate(0px, 0px);
+            transition: height ease-in-out 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="add">Adicionar</button>
+
+    <section class="urlList">
+        <div class="urlContainer toBottom">
+          <span>https://facebook.com.br</span>
+          <div>
+            <span>https://fasg2a.com.br</span>
+            <button class="squareButton">copy</button>
+          </div>
+        </div>
+  
+        <div class="urlContainer toBottom">
+          <span>https://facebook.com.br</span>
+          <div>
+            <span>https://fasg2fa3gaa.com.br</span>
+            <button class="squareButton">copy</button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+            const addButton = document.querySelector("button.add");
+            const urlList = document.querySelector("section.urlList");
+
+            addButton.onclick = () => {
+                let randomValue = (Math.random() * 999999).toFixed(5);
+                urlList.innerHTML += `
+                        <div class="urlContainer toBottom">
+                            <span>https://facebook${randomValue}.com.br</span>
+                            <div>
+                                <span>https://fasg2fa3gaa.com.br</span>
+                                <button class="squareButton">copy</button>
+                            </div>
+                        </div>
+                `;
+
+                console.log(urlList.offsetHeight);
+            }
+      </script>
+</body>
+</html>

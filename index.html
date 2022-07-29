@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/footer.css">
 
+  <script src="https://unpkg.com/scrollreveal"></script>
+
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -39,7 +41,8 @@
         <a href="#">Resources</a>
       </section>
 
-      <section>
+      <section id="loginInfo">
+        <button class="menu"></button>
         <a href="#">Login</a>
         <a href="#" class="circleButton">Sign Up</a>
       </section>
@@ -67,7 +70,7 @@
 
     <section class="urlList">
       <div class="urlContainer">
-        <span>https://facebook.com.br</span>
+        <span class="userURL">https://facebook.com.br</span>
         <div>
           <span>https://fasg2a.com.br</span>
           <button class="squareButton">copy</button>
@@ -75,7 +78,7 @@
       </div>
 
       <div class="urlContainer">
-        <span>https://facebook.com.br</span>
+        <span class="userURL">https://facebook.com.br</span>
         <div>
           <span>https://fasg2fa3gaa.com.br</span>
           <button class="squareButton">copy</button>
@@ -83,8 +86,8 @@
       </div>
     </section>
 
-    <section>
-      <article class="main">
+    <section id="detailsContainer">
+      <article class="main reveal">
         <h1>Advanced Statistics</h1>
         <p>
           Track how your links are performing across the web with our
@@ -94,7 +97,7 @@
 
       <section class="details">
         <hr>
-        <article>
+        <article class="reveal">
           <div class="img"><img src="./images/icon-brand-recognition.svg" alt="brand recognition"></div>
           <h2>Brand Recognition</h2>
           <p>
@@ -102,7 +105,7 @@
             mean a thing. Branded links help instil confidence in your content.
           </p>
         </article>
-        <article class="second">
+        <article class="second reveal">
           <div class="img"><img src="./images/icon-detailed-records.svg" alt="detailed Records"></div>
           <h2>Detailed Records</h2>
           <p>
@@ -110,7 +113,7 @@
             people engage with your content helps inform better decisions.
           </p>
         </article>
-        <article class="third">
+        <article class="third reveal">
           <div class="img"><img src="./images/icon-fully-customizable.svg" alt="fully customizable"></div>
           <h2>Fully Customizable</h2>
           <p>
@@ -151,21 +154,21 @@
           <a href="#" target="_self">Contact</a>
         </div>
         <section class="socialNetworks">
-          </div>
-            <img src="./images/icon-facebook.svg" alt="facebook logo">
-            <img src="./images/icon-twitter.svg" alt="twitter logo">
-            <img src="./images/icon-pinterest.svg" alt="pinterest logo">
-            <img src="./images/icon-instagram.svg" alt="instagram logo">
-          <div>
+          <img src="./images/icon-facebook.svg" alt="facebook logo">
+          <img src="./images/icon-twitter.svg" alt="twitter logo">
+          <img src="./images/icon-pinterest.svg" alt="pinterest logo">
+          <img src="./images/icon-instagram.svg" alt="instagram logo">
         </section>
       </section>
     </nav>
 
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/israeloriente1" target="_blank">IsraelOriente</a>.
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p>
+      <p>Coded by <a href="https://github.com/israeloriente1" target="_blank">IsraelOriente</a></p>
     </div>
   </footer>
+
+  <script src="./js/elementAnimation.js"></script>
 </body>
 
 </html>

@@ -57,3 +57,41 @@ nav section.socialNetworks:hover {
 div.attribution a {
     color: var(--cyanColor);
 }
+
+@media (max-width: 1116px) { /* tablets layout */
+    footer {
+        padding: 4rem 2rem 1rem 2rem;
+    }
+    
+    footer nav section {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 760px) { /* mobile layout */
+    footer nav img[alt="shortly logo"] {
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+
+    footer nav section div {
+        width: 100%;
+    }
+    
+    footer nav, footer nav section {
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer nav section.socialNetworks {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        width: 150px;
+    }
+
+    footer nav section.socialNetworks img {
+        padding: 0;
+    }
+}

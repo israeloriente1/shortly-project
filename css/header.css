@@ -26,6 +26,40 @@ header nav section .circleButton {
     width: 90px;
 }
 
+button.menu {
+    position: absolute;
+    top: 29px;
+    right: 1rem;
+    width: 25.3px;
+    height: 3px;
+    background-color: var(--grayishVioletColor);
+    border: none;
+    color: var(--grayishVioletColor);
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 20px;
+    padding:  0;
+    visibility: hidden;
+}
+
+button.menu::before, button.menu::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--grayishVioletColor);
+}
+
+button.menu::before {
+    top: 9px;
+}
+
+button.menu::after {
+    top: 18px;
+}
+
 .headerSection {
     display: flex;
     position: relative;
@@ -58,4 +92,82 @@ header nav section .circleButton {
 
 .headerSection article a.circleButton {
     padding: 3px 25px;
+}
+
+/* layout responsive */
+
+@media (max-width: 1116px) { /* tablets layout */
+    .headerSection {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headerSection img {
+        position: relative;
+        left: 0;
+        max-width: 80%;
+    }
+
+    .headerSection p {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1116px) { /* tablets layout */
+    .headerSection {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headerSection img {
+        position: relative;
+        left: 0;
+        max-width: 80%;
+    }
+
+    .headerSection p {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) { /* tablets layout */
+    header nav section a {
+        visibility: hidden;
+    }
+    
+    header nav section img[alt="shortly logo"] {
+        position: absolute;
+        top: 41px;    
+    }
+
+    button.menu {
+        visibility: visible;
+    }
+
+    .headerSection img {
+        position: relative;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) { /* mobile layout */
+
+    .headerSection h1 {
+        font-size: 44px;
+        line-height: 3rem;
+    }
+
+    .headerSection p {
+        width: 69%;
+        margin: 20px auto 40px auto;
+    }
+
+    .headerSection img {
+        position: relative;
+        top: -3rem;
+        left: 6rem;
+        max-width: 76vh;
+    }
 }
