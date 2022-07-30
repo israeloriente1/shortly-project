@@ -28,7 +28,7 @@ header nav section .circleButton {
 
 button.menu {
     position: absolute;
-    top: 29px;
+    top: 11px;
     right: 1rem;
     width: 25.3px;
     height: 3px;
@@ -91,7 +91,7 @@ button.menu::after {
 }
 
 .headerSection article a.circleButton {
-    padding: 3px 25px;
+    padding: 15px 35px;
 }
 
 /* layout responsive */
@@ -139,7 +139,7 @@ button.menu::after {
     
     header nav section img[alt="shortly logo"] {
         position: absolute;
-        top: 41px;    
+        top: 28px;
     }
 
     button.menu {
@@ -157,6 +157,7 @@ button.menu::after {
     .headerSection h1 {
         font-size: 44px;
         line-height: 3rem;
+        margin-top: 0;
     }
 
     .headerSection p {

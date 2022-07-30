@@ -34,10 +34,8 @@ nav, form, footer nav, .urlList, .main, .details {
 .circleButton {
     background-color: var(--cyanColor);
     color: white;
-    outline: 10px solid var(--cyanColor);
-    outline-offset: -1px;
-    padding: 0px 10px;
     text-align: center;
+    padding: 10px 20px;
     border: none;
     border-radius: 15px;
 }
@@ -96,7 +94,6 @@ main form {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
     border-radius: 12px;
     background-color: var(--veryDarkBlueColor);
     background-image: url("../images/bg-shorten-desktop.svg");
@@ -114,13 +111,14 @@ form input[type="url"] {
     padding: 15px;
     border: none;
     border-radius: 7px;
+    margin-right: 20px;
 }
 
-form input[type="url"]:focus {
+form button.squareButton:focus {
     outline: 3px solid var(--cyanColor);
 }
 
-form input[type="submit"] {
+form button.squareButton {
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -134,7 +132,6 @@ form input[type="submit"] {
 section.urlList {
     display: flex;
     flex-flow: column-reverse nowrap;
-    gap: 20px;
     transform: translate(0px, -50px);
 }
 
@@ -143,6 +140,7 @@ div.urlContainer {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+    margin-bottom: 20px;
     background-color: var(--lightGrayColor);
     border-radius: 10px;
     box-shadow: 0px 5px 30px #5a5a5a2e;
@@ -188,6 +186,7 @@ section.details {
     position: relative;
     justify-content: center;
     gap: 30px;
+    -webkit-gap: 30px;
 }
 
 section.details hr {
@@ -220,12 +219,12 @@ section.details h2 {
 div.img {
     position: absolute;
     top: -40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--veryDarkBlueColor);
     clip-path: circle();
+    -webkit-clip-path: circle();
     width: 85px;
     height: 85px;
 }
@@ -277,19 +276,28 @@ aside button {
         padding: 3vw 9vw 20vw 9vw;
     }
 
+    form input[type="url"] {
+        margin-right: 20px;
+    }
+
     .urlList .urlContainer {
         flex-direction: column;
         gap: 5px;
+        -webkit-gap: 5px;
         text-align: center;
     }
 
     /* section.urlList */
 
+    section.urlList div.urlContainer span.userURL {
+        width: 100%;
+    }
+
     .urlContainer span.userURL::after {
         content: "";
         display: block;
         height: 2px;
-        width: 400px;
+        width: 100%;
         margin-top: 5px;
         background-color: var(--grayColor);
     }
@@ -298,7 +306,8 @@ aside button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px
+        gap: 10px;
+        -webkit-gap: 10px;
     }
 
     .urlContainer div button {
@@ -312,6 +321,7 @@ aside button {
         align-items: center;
         text-align: center;
         gap: 0;
+        -webkit-gap: 0;
         padding-bottom: 4rem;
     }
 
@@ -352,9 +362,11 @@ aside button {
         width: 100%;
         box-sizing: border-box;
         padding: 25px;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
-    form input[type="submit"] {
+    form button.squareButton {
         width: 100%;
     }
 
