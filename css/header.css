@@ -114,24 +114,6 @@ button.menu::after {
     }
 }
 
-@media (max-width: 1116px) { /* tablets layout */
-    .headerSection {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-    }
-
-    .headerSection img {
-        position: relative;
-        left: 0;
-        max-width: 80%;
-    }
-
-    .headerSection p {
-        margin-top: 20px;
-    }
-}
-
 @media (max-width: 800px) { /* tablets layout */
     header nav section a {
         visibility: hidden;

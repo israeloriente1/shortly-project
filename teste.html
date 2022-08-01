@@ -5,54 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+
     <style>
-        section.urlList {
-            transform: translate(0px, 0px);
-            transition: height ease-in-out 0.3s;
+        div#menu {
+          max-width: 500px;
+          text-align: justify;
+          background-color: rgb(158, 217, 240);
+          color: black;
+          padding: 10px;
         }
     </style>
 </head>
-<body>
+<body id="body">
 
-    <button class="add">Adicionar</button>
-
-    <section class="urlList">
-        <div class="urlContainer toBottom">
-          <span>https://facebook.com.br</span>
-          <div>
-            <span>https://fasg2a.com.br</span>
-            <button class="squareButton">copy</button>
-          </div>
-        </div>
-  
-        <div class="urlContainer toBottom">
-          <span>https://facebook.com.br</span>
-          <div>
-            <span>https://fasg2fa3gaa.com.br</span>
-            <button class="squareButton">copy</button>
-          </div>
-        </div>
-      </section>
+    <div id="menu">
+      <h1>Exemplo</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, ex quos. Magnam suscipit eius voluptate aut in assumenda deleniti odio incidunt, voluptatem at cupiditate earum unde hic atque nostrum quasi.</p>
+      <p>status: <span id="elementStatus"></span></p>
+    </div>
 
       <script>
-            const addButton = document.querySelector("button.add");
-            const urlList = document.querySelector("section.urlList");
-
-            addButton.onclick = () => {
-                let randomValue = (Math.random() * 999999).toFixed(5);
-                urlList.innerHTML += `
-                        <div class="urlContainer toBottom">
-                            <span>https://facebook${randomValue}.com.br</span>
-                            <div>
-                                <span>https://fasg2fa3gaa.com.br</span>
-                                <button class="squareButton">copy</button>
-                            </div>
-                        </div>
-                `;
-
-                console.log(urlList.offsetHeight);
-            }
+          console.log(document.getElementById("menu").classList);
       </script>
 </body>
 </html>
