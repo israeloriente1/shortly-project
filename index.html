@@ -62,27 +62,12 @@
   </header>
 
   <main>
-    <form action="./index.html" method="post">
+    <form action="#" method="get">
       <input type="url" name="userURL" id="userURL" placeholder="Shorten a link here..." required>
-      <button class="squareButton">Shorten it!</button>
+      <button class="squareButton" onclick="verification(event)" ontouchstart="verification(event)">Shorten it!</button>
     </form>
 
     <section class="urlList">
-      <div class="urlContainer">
-        <span class="userURL">https://facebook.com.br</span>
-        <div>
-          <span>https://fasg2a.com.br</span>
-          <button class="squareButton">copy</button>
-        </div>
-      </div>
-
-      <div class="urlContainer">
-        <span class="userURL">https://facebook.com.br</span>
-        <div>
-          <span>https://fasg2fa3gaa.com.br</span>
-          <button class="squareButton">copy</button>
-        </div>
-      </div>
     </section>
 
     <section id="detailsContainer">
@@ -168,6 +153,7 @@
   </footer>
 
   <script src="./js/elementAnimation.js"></script>
+  <script src="./js/elementsInteraction.js"></script>
 </body>
 
 </html>
