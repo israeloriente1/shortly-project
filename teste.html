@@ -4,29 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 
     <style>
-        div#menu {
-          max-width: 500px;
-          text-align: justify;
-          background-color: rgb(158, 217, 240);
-          color: black;
-          padding: 10px;
+        body {
+          background-color: rgb(21, 247, 255);
+        }
+
+        button {
+          width: 150px;
+          height: 50px;
         }
     </style>
 </head>
-<body id="body">
-
-    <div id="menu">
-      <h1>Exemplo</h1>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, ex quos. Magnam suscipit eius voluptate aut in assumenda deleniti odio incidunt, voluptatem at cupiditate earum unde hic atque nostrum quasi.</p>
-      <p>status: <span id="elementStatus"></span></p>
-    </div>
-
-      <script>
-          console.log(document.getElementById("menu").classList);
-      </script>
+<body>
+    <button class="squareButton">Shorten it!</button>
+    <button class="squareButton"><span class="buttonLoading"></span></button>
+    <button><span class="buttonLoading"></span></button>
 </body>
 </html>

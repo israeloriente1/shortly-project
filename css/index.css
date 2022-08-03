@@ -6,15 +6,15 @@
 * {
     --defaultFont: "Poppins";
 
-    --cyanColor: hsl(180, 66%, 49%);
-    --lightCyanColor: hsl(180deg 48% 66%);
-    --darkVioletColor: hsl(257, 27%, 26%);
-    --redColor: hsl(0, 87%, 67%);
-    --grayColor: hsl(230, 25%, 95%);
-    --lightGrayColor: hsl(0, 0%, 99%);
-    --grayishVioletColor: hsl(260, 5%, 53%);
-    --veryDarkBlueColor: hsl(255, 25%, 25%);
-    --veryDarkVioletColor: hsl(260, 8%, 14%);
+    --cyanColor: #2acfcf;
+    --lightCyanColor: #80d1d1;
+    --darkVioletColor: #3b3054;
+    --redColor: #f46262;
+    --grayColor: #eff0f5;
+    --lightGrayColor: #fcfcfc;
+    --grayishVioletColor: #85818d;
+    --veryDarkBlueColor: #383050;
+    --veryDarkVioletColor: #232127;
 }
 
 body {
@@ -72,6 +72,35 @@ nav, form, footer nav, .urlList, .main, .details {
 .third {
     transform: translate(0px, 100px);
 }
+
+span.buttonLoading {
+    display: block;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border: 3px;
+    border-style: solid;
+    border-top-color: var(--veryDarkVioletColor);
+    border-right-color: var(--grayColor);
+    border-bottom-color: var(--grayColor);
+    border-left-color: var(--grayColor);
+    border-radius: 50%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.219);
+    animation: buttonLoading;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes buttonLoading {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 p, input[type="url"] {
     color: var(--grayishVioletColor);
@@ -175,7 +204,7 @@ div.urlContainer div span {
 
 section.urlList div.urlContainer span.userURL {
     width: 100%;
-    height: 30px;
+    height: 25px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -249,6 +278,11 @@ div.img {
     height: 85px;
 }
 
+div.img img {
+    width: 40px;
+    height: 40px;
+}
+
 /* aside */
 
 aside {
@@ -309,12 +343,12 @@ aside button {
 
     /* section.urlList */
 
-    .urlContainer span.userURL::after {
+    .urlList .urlContainer div::before {
         content: "";
         display: block;
         height: 2px;
         width: 100%;
-        margin-top: 5px;
+        margin: 10px 0px;
         background-color: var(--grayColor);
     }
 

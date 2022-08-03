@@ -26,38 +26,61 @@ header nav section .circleButton {
     width: 90px;
 }
 
-button.menu {
+button#menuContainer {
     position: absolute;
     top: 11px;
-    right: 1rem;
-    width: 25.3px;
-    height: 3px;
-    background-color: var(--grayishVioletColor);
+    right: 40px;
+    width: 30px;
+    height: 30px;
     border: none;
-    color: var(--grayishVioletColor);
+    background-color: transparent;
     cursor: pointer;
-    font-size: 25px;
-    font-weight: 700;
     margin: 20px;
     padding:  0;
     visibility: hidden;
 }
 
-button.menu::before, button.menu::after {
-    content: "";
-    position: absolute;
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#menuContainer img {
+    width: 100%;
+    filter: invert(54%) sepia(6%) saturate(465%) hue-rotate(219deg) brightness(93%) contrast(88%);
+}
+
+#menuContent {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--grayishVioletColor);
+    position: absolute;
+    right: -85%;
+    top: 62px;
+    width: 91vw;
+    padding: 50px 10px;
+    background-color: var(--veryDarkBlueColor);
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px #0000008f;
+    cursor: pointer;
+    transition: opacity ease 0.3s, transform ease 0.3s;
+    z-index: 9999;
 }
 
-button.menu::before {
-    top: 9px;
+#menuContent nav {
+    display: flex;
+    flex-direction: column;
 }
 
-button.menu::after {
-    top: 18px;
+#menuContent nav hr {
+    width: 250px;
+}
+
+#menuContent nav a {
+    color: var(--lightGrayColor);
+    font-size: 17px;
+    width: 250px;
+    visibility: inherit;
+    margin: 6px 0px;
+    transition: opacity 0.3s;
 }
 
 .headerSection {
@@ -124,8 +147,13 @@ button.menu::after {
         top: 28px;
     }
 
-    button.menu {
+    button#menuContainer {
         visibility: visible;
+    }
+
+    #menuContent {
+        right: -66%;
+        width: 50vw;
     }
 
     .headerSection img {
@@ -152,5 +180,11 @@ button.menu::after {
         top: -3rem;
         left: 6rem;
         max-width: 76vh;
+    }
+
+    #menuContent {
+        right: -142%;
+        width: 91vw;
+        padding: 50px 0px;
     }
 }

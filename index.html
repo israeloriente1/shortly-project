@@ -42,7 +42,21 @@
       </section>
 
       <section id="loginInfo">
-        <button class="menu"></button>
+        <button id="menuContainer" ontouchstart="mobileMenu(event)" onclick="mobileMenu()">
+          <img src="./images/hamburger-menu-icon.svg" alt="mobile menu logo" class="menuLogo">
+
+          <section id="menuContent" class="hidden">
+            <nav>
+              <a href="#">Features</a>
+              <a href="#">Pricing</a>
+              <a href="#">Resources</a>
+              <hr>
+              <a href="#">Login</a>
+              <a href="#" class="circleButton">Sign Up</a>
+            </nav>
+          </section>
+        </button>
+
         <a href="#">Login</a>
         <a href="#" class="circleButton">Sign Up</a>
       </section>
@@ -64,11 +78,10 @@
   <main>
     <form action="#" method="get">
       <input type="url" name="userURL" id="userURL" placeholder="Shorten a link here..." required>
-      <button class="squareButton" onclick="verification(event)" ontouchstart="verification(event)">Shorten it!</button>
+      <button class="squareButton" onfocus="verification(event)">Shorten it!</button>
     </form>
 
-    <section class="urlList">
-    </section>
+    <section class="urlList"></section>
 
     <section id="detailsContainer">
       <article class="main reveal">

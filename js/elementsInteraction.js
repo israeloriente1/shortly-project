@@ -1,28 +1,36 @@
+function mobileMenu(event) {
+    event.preventDefault();
+    let mobileMenu = document.querySelector("section#menuContent");
+    mobileMenu.classList.toggle("hidden");
+}
+
 
 async function verification(event) {  
     /* It will check if the input value is valid and return a new element with the shortened url */
     event.preventDefault();
+    let urlButton = event.path[0];
     let urlInput = event.path[1][0];
     let isValid = urlInput.validity.valid;
     let urlListContainer = document.querySelector("section.urlList");
 
+    urlButton.setAttribute("disabled", "true");
+    urlButton.innerHTML = `<span class="buttonLoading"></span>`;
+
     if (isValid) {
         
         const apiRequest = await fetch(`https://api.shrtco.de/v2/shorten?url=${urlInput.value}`);
-        let urlShortened = await apiRequest.json();
+        const apiReturn = await apiRequest.json();
 
-        if (urlShortened.ok) {
+        if (apiReturn.ok) {
 
             urlListContainer.innerHTML += 
-                `
-                <div class="urlContainer">
-                    <span class="userURL">${urlShortened.result.original_link}</span>
+                `<div class="urlContainer">
+                    <span class="userURL">${apiReturn.result.original_link}</span>
                     <div>
-                    <span>${urlShortened.result.full_short_link}</span>
-                    <button class="squareButton" onclick="copy(event)" ontouchstart="copy(event)">copy</button>
+                    <span>${apiReturn.result.full_short_link}</span>
+                    <button class="squareButton" ontouchstart="copy(event)" onclick="copy(event)">copy</button>
                     </div>
-                </div>
-                `;
+                </div>`;
         }else {
             urlListContainer.innerHTML += `<p class="erroMsg">The process could not be completed. Try again later.</p>`;
 
@@ -40,6 +48,9 @@ async function verification(event) {
     }
 
     urlInput.value = "";
+    urlButton.innerHTML = "Shorten it!";
+    urlButton.removeAttribute("disabled");
+    console.log(event);
 }
 
 
