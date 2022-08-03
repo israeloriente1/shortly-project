@@ -76,9 +76,9 @@
   </header>
 
   <main>
-    <form action="#" method="get">
+    <form action="#" method="get" novalidate onsubmit="disableValidationMsg(event)">
       <input type="url" name="userURL" id="userURL" placeholder="Shorten a link here..." required>
-      <button class="squareButton" onfocus="verification(event)">Shorten it!</button>
+      <button class="squareButton" ontouchstart="verification(event)" onclick="verification(event)">Shorten it!</button>
     </form>
 
     <section class="urlList"></section>

@@ -13,7 +13,8 @@ footer img[alt="shortly logo"] {
 footer a {
     font-weight: 500;
     color: var(--grayishVioletColor);
-    padding-left: 0;
+    padding: 10px 0px;
+    
 }
 
 footer a:hover {
@@ -54,6 +55,14 @@ nav section.socialNetworks:hover {
     color: var(--cyanColor);
 }
 
+nav section.socialNetworks img {
+    cursor: pointer;
+}
+
+nav section.socialNetworks img:hover {
+    filter: invert(65%) sepia(38%) saturate(734%) hue-rotate(131deg) brightness(96%) contrast(96%);
+}
+
 div.attribution a {
     color: var(--cyanColor);
 }
@@ -76,12 +85,14 @@ div.attribution a {
 
     footer nav section div {
         width: 100%;
+        margin-bottom: 20px;
     }
     
     footer nav, footer nav section {
         flex-direction: column;
         margin: auto;
         text-align: center;
+        gap: 0;
     }
 
     footer nav section.socialNetworks {

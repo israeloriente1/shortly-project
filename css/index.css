@@ -31,6 +31,14 @@ nav, form, footer nav, .urlList, .main, .details {
     margin: auto;
 }
 
+.validateMsg {
+    position: absolute;
+    top: 73%;
+    width: 86.5%;
+    font-size: 16px;
+    color: var(--redColor);
+}
+
 .erroMsg {
     text-align: center;
 }
@@ -57,12 +65,16 @@ nav, form, footer nav, .urlList, .main, .details {
     text-align: center;
     border: none;
     border-radius: 7px;
-    transition: background-color 0.4s;
+    transition: background-color 0.4s, transform 0.2s;
 }
 
 .squareButton:hover {
     background-color: var(--lightCyanColor);
     color: white;
+}
+
+.squareButton:active {
+    transform: scale(0.97);
 }
 
 .second {
@@ -149,7 +161,7 @@ form input[type="url"] {
     margin-right: 20px;
 }
 
-form button.squareButton:focus {
+form button.squareButton:focus, form input[type="url"]:focus {
     outline: 3px solid var(--cyanColor);
 }
 
@@ -323,6 +335,10 @@ aside button {
     form input[type="url"] {
         width: 50%;
     }
+
+    .validateMsg {
+        width: 71%;
+    }
 }
 
 @media (max-width: 800px) { /* tablets layout */
@@ -332,6 +348,10 @@ aside button {
 
     form input[type="url"] {
         margin-right: 20px;
+    }
+
+    .validateMsg {
+        width: 80%;
     }
 
     .urlList .urlContainer {
@@ -414,6 +434,14 @@ aside button {
         padding: 25px;
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .validateMsg {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-top: -17px;
+        margin-bottom: 3px;
     }
 
     form button.squareButton {
