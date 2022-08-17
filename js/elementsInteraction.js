@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 const formInput = document.querySelector("input#userURL");
 
-function disableValidationMsg(event) {
+function disableValidationMsg  (event) {
     event.preventDefault();
 }
 
